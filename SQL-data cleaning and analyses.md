@@ -63,7 +63,6 @@ SELECT * FROM cleaned_branch;
 ;
 ```
 
----
 
 ## 🧠 Task 2: Response Time by Branch and Service
 
