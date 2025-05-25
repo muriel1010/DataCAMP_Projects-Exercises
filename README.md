@@ -47,10 +47,8 @@ Extracted all services and branches with average ratings below the 4.5 threshold
 
 ## 🛠️ Tools Used
 
-- SQL (data wrangling and cleaning)
-- Jupyter Notebooks
-- pandas (for DataFrame manipulation)
-- PostgreSQL (assumed for query compatibility)
+- SQL -PostgreSQL(data wrangling and cleaning)
+
 
 ---
 
