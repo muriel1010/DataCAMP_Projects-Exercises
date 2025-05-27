@@ -128,4 +128,6 @@ GROUP BY service_id, branch_id
 HAVING AVG(rating) < 4.5;
 
 ```
+## 🛠️ Tools Used
+- **SQL (PostgreSQL)** — for data cleaning, aggregation, filtering, and performance analysis  
 
