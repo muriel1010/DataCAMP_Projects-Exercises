@@ -75,4 +75,57 @@ WITH cleaned_branch AS (
   FROM branch
 )
 SELECT * FROM cleaned_branch;
+```
+### 🧠 Task 2: Response Time by Branch and Service
+
+**Goal:**  
+Determine if response time to customer requests varies by hotel branch and service type.
+
+**SQL Code:**
+```sql
+SELECT
+  service_id,
+  branch_id,
+  ROUND(AVG(time_taken), 2) AS avg_time_taken,
+  ROUND(MAX(time_taken), 2) AS max_time_taken
+FROM request
+GROUP BY service_id, branch_id;
+
+```
+### 🎯 Task 3: Targeting Meal and Laundry Services
+
+**Goal:**  
+Help management focus on improving Meal and Laundry services in EMEA and LATAM by identifying relevant service requests.
+
+**SQL Code:**
+```sql
+SELECT
+  s.description,
+  b.id AS branch_id,
+  b.location,
+  r.request_id,
+  r.rating
+FROM request r
+JOIN branch b ON r.branch_id = b.id
+JOIN service s ON r.service_id = s.id
+WHERE s.description IN ('Meal', 'Laundry')
+  AND b.location IN ('EMEA', 'LATAM');
+
+```
+### 📉 Task 4: Identify Underperforming Services
+
+**Goal:**  
+Identify service-branch pairs with average customer ratings below 4.5.
+
+**SQL Code:**
+```sql
+SELECT 
+  service_id,
+  branch_id,
+  ROUND(AVG(rating), 2) AS avg_rating
+FROM request
+GROUP BY service_id, branch_id
+HAVING AVG(rating) < 4.5;
+
+```
 
