@@ -1,54 +1,80 @@
-# 🏨 LuxurStay Hotel Service Performance Analysis
+# Data Analytics Portfolio
 
-LuxurStay is an international hotel chain offering services to both business and leisure travelers. Management has observed a decline in customer satisfaction, especially related to slow room services in certain branches. This project explores and cleans service data to help identify performance gaps and recommend targeted improvements.
+Welcome to my Data Analytics portfolio—a curated collection of hands-on projects and exercises completed through DataCamp.
 
----
+Within this repository, you’ll find multiple projects spanning data cleaning, analysis, visualization, and storytelling, each demonstrating practical applications of SQL, Python, and other key tools.
 
-## 📊 Project Objectives
+Each project is organized in its own folder and includes a detailed README that walks through the objectives, methodology, and insights gained.
 
-- Identify data quality issues and clean inconsistencies in the `branch` table.
-- Evaluate service performance across hotel branches.
-- Highlight service delays and sub-par ratings to support operational improvements.
-- Provide actionable insights into customer satisfaction metrics.
+Feel free to explore the projects and exercises to see how I approach real-world data challenges with analytical rigor and creativity.
 
----
+💬 I’d love to hear your ideas, feedback, or any questions!  
+📫 Don’t hesitate to reach out or connect.
 
-## 🧹 Data Cleaning Steps
 
-We performed cleaning operations on the `branch` table based on the following rules:
+# Welcome to My Data Projects Hub! 👋
 
-| Column Name     | Cleaning Rule                                                                 |
-|-----------------|-------------------------------------------------------------------------------|
-| `location`      | Replace NULL or invalid values with `'Unknown'`.                              |
-| `total_rooms`   | Ensure values are between 1–400. Replace NULLs with default `100`.            |
-| `staff_count`   | Replace NULLs with `total_rooms * 1.5`.                                       |
-| `opening_date`  | Convert to integer. Acceptable range: 2000–2023. Replace NULLs with `2023`.   |
-| `target_guests` | Replace NULLs with `'Leisure'`. Accept only `'Leisure'` or `'Business'`.      |
+Here you'll find a curated collection of my **DataCamp projects and exercises**, showcasing hands-on experience with:
 
-Output: A cleaned DataFrame named `clean_branch_data`.
+- **Data Cleaning & Wrangling** 🧹  
+- **SQL & Database Management** 🗃️  
+- **Exploratory Data Analysis (EDA)** 📊  
+- **Data Visualization** 📈  
+- **Statistical Analysis & Modeling** 📐  
+- **Python & R Programming** 🐍📊  
 
----
+This portfolio highlights my passion for transforming raw data into **actionable insights** and solving real-world problems through data.
 
-## 📈 Key Analyses
+Stay tuned as I expand this hub with projects from other platforms and more advanced work!
 
-### 1. Average and Maximum Service Time by Branch
-Calculated average and max response time by service and branch.  
-**Output**: `average_time_service`
-
-### 2. Targeted Hotel Services in EMEA and LATAM
-Filtered Meal and Laundry services in EMEA and LATAM for operational focus.  
-**Output**: `target_hotels`
-
-### 3. Low-Performing Services (< 4.5 Rating)
-Extracted all services and branches with average ratings below the 4.5 threshold.  
-**Output**: `average_rating`
+💬 Feel free to explore, leave comments, or reach out if you want to connect.
 
 ---
 
-## 🛠️ Tools Used
+*Let’s unlock the power of data together! 🚀*
 
-- SQL -PostgreSQL(data wrangling and cleaning)
+# 👋 Welcome to My Data Analytics Portfolio
 
+I’m Muriel — a **Data Analyst & Aspiring Data Scientist** passionate about turning raw data into actionable insights.
 
 ---
+
+## 🚀 What You’ll Find Here
+
+- 📊 **DataCamp Projects & Exercises**  
+  Real-world projects focused on **data cleaning**, **SQL querying**, **data visualization**, and **statistical analysis**.
+
+- 💡 Hands-on work showcasing skills in:  
+  **SQL**, **Python (Pandas, NumPy, Matplotlib)**, **Data Wrangling**, **Exploratory Data Analysis (EDA)**, and **Storytelling with Data**.
+
+- 🔗 Future expansions planned:  
+  Projects from other platforms like **Kaggle**, **LeetCode**, or **personal challenges**.
+
+---
+
+## 🎯 Skills Highlight
+
+- **Data Wrangling & Cleaning**  
+- **SQL Query Writing & Optimization**  
+- **Python Data Analysis & Visualization**  
+- **Statistical Methods & Hypothesis Testing**  
+- **Reporting & Dashboard Creation**
+
+---
+
+## 📂 How to Explore
+
+- Browse individual project folders to see detailed **readme files**, code notebooks, and results.  
+- Check out my **DataCamp projects** for hands-on applied learning.
+
+---
+
+## 💬 Let’s Connect!
+
+I’m always open to **feedback**, **collaboration ideas**, or **career opportunities** — just reach out!
+
+---
+
+*(Coming Soon: Links to LinkedIn, portfolio website, and more!)*
+
 
