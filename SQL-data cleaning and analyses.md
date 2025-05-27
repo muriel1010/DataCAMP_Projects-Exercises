@@ -24,9 +24,7 @@ We performed cleaning operations on the `branch` table based on the following ru
 | `staff_count`   | Replace NULLs with `total_rooms * 1.5`.                                       |
 | `opening_date`  | Convert to integer. Acceptable range: 2000–2023. Replace NULLs with `2023`.   |
 | `target_guests` | Replace NULLs with `'Leisure'`. Accept only `'Leisure'` or `'Business'`.      |
-
-Output: A cleaned DataFrame named `clean_branch_data`.
-
+.
 ---
 
 ## 📈 Key Analyses
@@ -48,15 +46,6 @@ Extracted all services and branches with average ratings below the 4.5 threshold
 ## 🛠️ Tools Used
 
 - SQL -PostgreSQL(data wrangling and cleaning)
-
-
----
-
-
-
-## 🧪 Hotel Service Analysis – SQL Tasks Breakdown
-
-This document outlines the SQL tasks, business questions, and corresponding queries used in the analysis.
 
 ---
 
