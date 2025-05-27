@@ -9,12 +9,6 @@ This document outlines the SQL tasks, business questions, and corresponding quer
 **Goal:**  
 Clean the branch table to fix missing/invalid values as per provided criteria.
 
-**Query Summary:**
-- Cleaned `location`, `total_rooms`, `staff_count`, `opening_date`, and `target_guests`
-- Used `CASE WHEN` statements to impute missing or invalid values
-
-**Output:** `clean_branch_data`
-
 ```sql
 WITH cleaned_branch AS (
   SELECT
@@ -69,17 +63,6 @@ SELECT * FROM cleaned_branch;
 **Goal:**  
 To determine if response time to customer requests varies by hotel branch and service type. This will help the Head of Operations identify which branches or services are underperforming.
 
-**What we did:**  
-We calculated:
-- The average time taken (`avg_time_taken`)  
-- The maximum time taken (`max_time_taken`)  
-for each combination of service and hotel branch.
-
-**Logic:**
-- Grouped data by `service_id` and `branch_id`
-- Used `AVG()` and `MAX()` on the `time_taken` column
-- Rounded results to two decimal places
-
 **SQL Summary:**
 
 ```sql
@@ -99,19 +82,6 @@ GROUP BY service_id, branch_id;
 
 **Goal:**  
 Help management focus on improving **Meal** and **Laundry** services in **EMEA** and **LATAM** regions by identifying relevant service requests.
-
-**What we did:**  
-We filtered the data to retrieve:
-- Service description  
-- Branch ID and location  
-- Request ID  
-- Customer rating  
-
-**Logic:**
-- Joined `request`, `branch`, and `service` tables
-- Filtered for services: `'Meal'` and `'Laundry'`
-- Filtered for locations: `'EMEA'` and `'LATAM'`
-- Used the original `branch` table (not cleaned data)
 
 **SQL Summary:**
 
@@ -134,15 +104,6 @@ WHERE s.description IN ('Meal', 'Laundry')
 
 **Goal:**  
 Help management focus on branch-service combinations where customer satisfaction is **below the target rating of 4.5**.
-
-**What we did:**  
-We calculated the **average rating** for each combination of `service_id` and `branch_id` and filtered for those **below 4.5**.
-
-**Logic:**
-- Grouped by `service_id` and `branch_id`
-- Calculated the **average rating**
-- Filtered only combinations with an average rating < 4.5
-- Rounded results to 2 decimal places
 
 **SQL Summary:**
 
